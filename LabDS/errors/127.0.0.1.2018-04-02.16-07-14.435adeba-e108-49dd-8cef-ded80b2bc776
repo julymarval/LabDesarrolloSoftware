@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'function' object has no attribute '__unicode__'"
+p3
+sS'layer'
+p4
+S'/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f2c3365f5b0, file "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/july/Escritorio/LabDesarrolloSoftware/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 69, in <module>\n  File "/home/july/Escritorio/LabDesarrolloSoftware/gluon/globals.py", line 419, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 18, in index\n    print data.connectDataBase.__unicode__().encode(\'utf-8\', \'ignore\')\nAttributeError: \'function\' object has no attribute \'__unicode__\'\n'
+p11
+s.

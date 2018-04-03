@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> __call__() takes at least 2 arguments (1 given)"
+p3
+sS'layer'
+p4
+S'/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f0f64b5b430, file "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/july/Escritorio/LabDesarrolloSoftware/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 63, in <module>\n  File "/home/july/Escritorio/LabDesarrolloSoftware/gluon/globals.py", line 419, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/july/Escritorio/LabDesarrolloSoftware/applications/LabDS/controllers/default.py", line 13, in index\n    return dict(message=T())\nTypeError: __call__() takes at least 2 arguments (1 given)\n'
+p11
+s.
