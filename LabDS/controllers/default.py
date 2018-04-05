@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*
 
+import json
 mongo = local_import('MongoModule')
+constants = local_import('ConstantsModule')
 
 
 # -------------------------------------------------------------------------
@@ -12,9 +14,27 @@ mongo = local_import('MongoModule')
 
 # ---- example index page ----
 def index():
-    data = mongo.DataManager()
-    result = data.createAccount("july","marval","july.marval@gmail.com","12345678","prueba")
-    return dict(message=T(result))
+    # los valores que van en el json deben ser parametrizados y validados (lenght, tipo, etc)
+    # ademas el pwd debe hacercele un hash para que no este almacenado como plain text en la BD
+    # les recomiendo este link: http://web2py.com/books/default/chapter/36/09/control-de-acceso
+    try:
+        data = mongo.DataManager()
+        json = {"name":"airam","last_name":"aguero","pwd":"123456789",
+                "role":"user","school":"computacion",
+                "email":"july@gmail.com","document_id":"V-85963204"}
+
+        #calling database module
+        result = data.createAccount(json)
+
+        if result:
+            return dict(message=T(result))
+        else:
+            return dict(message=T())
+
+    except Exception as e:
+        return dict(message=T())
+
+      
 
 '''
 # ---- API (example) -----
