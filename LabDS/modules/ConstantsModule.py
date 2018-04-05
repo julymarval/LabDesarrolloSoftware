@@ -40,9 +40,9 @@ class MongoConstants:
         self.MONGO_OPERATOR_PUSH = "$push"
         self.MONGO_OPERATOR_SET = "$set"
 
-
+'''
 class MessagesConstants:
 
     #construct
     def __init__(self):
-        
+'''        

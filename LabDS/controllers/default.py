@@ -29,10 +29,10 @@ def index():
         if result:
             return dict(message=T(result))
         else:
-            return dict(message=T())
+            return dict(message=T("error"))
 
     except Exception as e:
-        return dict(message=T())
+        return dict(message=T("error"))
 
       
 

@@ -23,7 +23,7 @@ class DataManager:
 			self.collection_prof = self.db.profiles
 
 		except Exception as e:
-			print(e)
+			print("MongoModule - Construct - Error - " + e)
         
     
 	def createAccount(self,data):
@@ -37,10 +37,10 @@ class DataManager:
 										mongoConstants.DOCUMENT_FIELD_ROLE:data["role"]})
 				return True
 			else:
-				raise 
+				print ("ok")
 		except Exception as e:
 			#logging.errors("Error - " + e)
-			print (e)
+			print ("MongoModule - CreateAccount - Error - " + e)
 
 	'''def findUser(self,email): 
 

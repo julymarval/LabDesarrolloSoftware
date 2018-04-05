@@ -2,11 +2,7 @@
 
 import logging
 import time
-import sys
 import datetime
-import UtilsModule
-import traceback
-
 
 
 logging.basicConfig(filename="/var/log/LabDdS", level=logging.INFO,
