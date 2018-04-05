@@ -21,6 +21,7 @@ class MongoConstants:
         self.mongoHost = "localhost"
         self.mongoPort = 27017
 
+        self.DATABASE = "LabDdS"
         self.COLLECTION_PROFILES = "profiles"
         self.COLLECTION_BOOKS = "books"
         self.COLLECTION_STATUS =  "status"
@@ -33,7 +34,15 @@ class MongoConstants:
         self.DOCUMENT_FIELD_SCHOOL = "school"
         self.DOCUMENT_FIELD_PWD = "pwd"
 
+
         self.MONGO_OPERATOR_OR = "$or"
         self.MONGO_OPERATOR_GREATER_THAN = "$gt"
         self.MONGO_OPERATOR_PUSH = "$push"
         self.MONGO_OPERATOR_SET = "$set"
+
+'''
+class MessagesConstants:
+
+    #construct
+    def __init__(self):
+'''        

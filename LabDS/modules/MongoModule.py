@@ -5,9 +5,9 @@ from pymongo import errors as mongoerrors
 import logging
 import datetime
 
-from ConstantsModule import *
+from ConstantsModule import MongoConstants as mConstants
 
-mongoConstants = MongoConstants()
+mongoConstants = mConstants()
 
 
 logging.basicConfig(filename="/var/log/LabDdS", level=logging.INFO,
@@ -16,27 +16,33 @@ logging.basicConfig(filename="/var/log/LabDdS", level=logging.INFO,
 
 class DataManager:
 
-    def __init__(self):
+	def __init__(self):
 		try:
-
-			print ("connecting to mongo....")
 			self.mongoClient = MongoClient(mongoConstants.mongoHost, mongoConstants.mongoPort)
 			self.db = self.mongoClient.LabDdS
+			self.collection_prof = self.db.profiles
 
 		except Exception as e:
-			print(e)
+			print("MongoModule - Construct - Error - " + e)
         
     
-    def createAccount(self, name, last_name, email, document_id, pwd,school):
+	def createAccount(self,data):
 		try:
-			self.db.insert({})
+			if data["role"] == 'student' or data["role"] == 'admin':
+				self.collection_prof.insert_one({mongoConstants.DOCUMENT_FIELD_NAME:data["name"], 
+										mongoConstants.DOCUMENT_FIELD_LASTNAME:data["last_name"],
+										mongoConstants.DOCUMENT_FIELD_EMAIL:data["email"],
+										mongoConstants.DOCUMENT_FIELD_DOCUMENTID:data["document_id"],
+										mongoConstants.DOCUMENT_FIELD_SCHOOL:data["school"],
+										mongoConstants.DOCUMENT_FIELD_ROLE:data["role"]})
+				return True
+			else:
+				print ("ok")
 		except Exception as e:
+			#logging.errors("Error - " + e)
+			print ("MongoModule - CreateAccount - Error - " + e)
 
-
-        return "created account"
-
-    '''
-    def findUser(self,email): 
+	'''def findUser(self,email): 
 
     def updateUser(self):
 
@@ -44,7 +50,8 @@ class DataManager:
 
     def updateOrder(self):
 
-    def deleteOrder(self):
-        '''
+    def deleteOrder(self):'''
+    
+	
         
     
