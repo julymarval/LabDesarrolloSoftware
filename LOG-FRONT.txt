@@ -1,0 +1,41 @@
+                                    |______SERVIDOR______
+VISTA LOGIN			    |
+				    |
+       (autenticación)		    |
+correo_usuario------------------>   |   INICIO DE SESION
+contrasena_usuario-------------->   |
+-------------------------------------------------------------------------
+       (registro_de_usuario)        |
+				    |
+nombre_usuario------------------->  |
+apellido_usuario----------------->  |
+ci_usuario----------------------->  |   REGISTRAR USUARIO
+correo_registro_usuario---------->  |
+contrasena_registro_usuario------>  |
+------------------------------- ---------------- -------------------------
+VISTA INDEX                         |
+                                    |
+fecha_prestamo--------------------> |
+fecha_devolucion------------------> |
+equipo_a--------------------------> |
+equipo_b--------------------------> | REGISTRAR SOLICITUD PRESTAMO
+equipo_c--------------------------> |
+equipo_d--------------------------> |
+areas_multimedia------------------> |
+------------------------------------|--------------------------------------
+VISTA ADMIN			    |
+	                            |
+CARGAR REGISTROS DE SOLICITUDES <-------------|CONSULTA BD
+equipoA ------------------------->  | 
+equipoB ------------------------->  | AÑADIR NUEVOS PRODUCTOS
+equipoC-------------------------->  |
+equipoD-------------------------->  |
+equipoE-------------------------->  |
+
+
+
+
+
+
+
+
